@@ -32,6 +32,7 @@ macro_rules! check_bit_fn {
 
 pub mod irq;
 pub mod paging;
+pub mod segmentation;
 pub mod task;
 pub mod syscall;
 pub mod sgx;
