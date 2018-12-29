@@ -76,6 +76,11 @@ pub unsafe fn cr2() -> usize {
     ret
 }
 
+/// Write cr2
+pub unsafe fn cr2_write(val: u64) {
+	asm!("mov $0, %cr2" :: "r" (val) : "memory");
+}
+
 /// Contains page-table root pointer.
 pub unsafe fn cr3() -> u64 {
     let ret: u64;
